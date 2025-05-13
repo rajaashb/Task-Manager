@@ -41,7 +41,7 @@ def add():
     cursor = conn.cursor()
     cursor.execute(f'INSERT INTO {TABLE_NAME} (title,description) VALUES (?,?)', (title, description))
     conn.commit()
-    conn.close
+    conn.close()
     return redirect(url_for('index'))
 
 #Update task status
